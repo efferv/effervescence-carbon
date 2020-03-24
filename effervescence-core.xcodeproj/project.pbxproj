@@ -7,31 +7,89 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FB5C2B3242A1DB500189EFB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C2B2242A1DB500189EFB /* main.cpp */; };
+		3FB5C2EB242A325400189EFB /* CABitOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB5C2D3242A1EC000189EFB /* CABitOperations.h */; };
+		3FB5C2EC242A328400189EFB /* CACFArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C2E2242A1EC000189EFB /* CACFArray.cpp */; };
+		3FB5C2ED242A328900189EFB /* CACFDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C2CF242A1EC000189EFB /* CACFDictionary.cpp */; };
+		3FB5C2EE242A328D00189EFB /* CACFNumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C2C4242A1EC000189EFB /* CACFNumber.cpp */; };
+		3FB5C2EF242A329100189EFB /* CACFString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C2D1242A1EC000189EFB /* CACFString.cpp */; };
+		3FB5C2F0242A329900189EFB /* CARingBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C2DC242A1EC000189EFB /* CARingBuffer.cpp */; };
+		3FB5C2F1242A32AA00189EFB /* CADebugger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C2E1242A1EC000189EFB /* CADebugger.cpp */; };
+		3FB5C2F2242A32AB00189EFB /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C2CE242A1EC000189EFB /* CADebugMacros.cpp */; };
+		3FB5C2F3242A32B200189EFB /* CADispatchQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C2D5242A1EC000189EFB /* CADispatchQueue.cpp */; };
+		3FB5C2F4242A32B800189EFB /* CADebugPrintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C2DB242A1EC000189EFB /* CADebugPrintf.cpp */; };
+		3FB5C2F5242A32BF00189EFB /* CAHostTimeBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C2DD242A1EC000189EFB /* CAHostTimeBase.cpp */; };
+		3FB5C2F6242A32C500189EFB /* CAMutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C2E0242A1EC000189EFB /* CAMutex.cpp */; };
+		3FB5C2F7242A32C700189EFB /* CAPThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C2D7242A1EC000189EFB /* CAPThread.cpp */; };
+		3FB5C2F8242A32CA00189EFB /* CAVolumeCurve.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C2C9242A1EC000189EFB /* CAVolumeCurve.cpp */; };
+		3FB5C350242A367500189EFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB5C2C0242A1E0500189EFB /* Foundation.framework */; };
+		3FB5C351242A367500189EFB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB5C2BE242A1DFA00189EFB /* Accelerate.framework */; };
+		3FB5C352242A367500189EFB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB5C2BC242A1DE600189EFB /* CoreFoundation.framework */; };
+		3FB5C353242A367500189EFB /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB5C2BA242A1DD700189EFB /* CoreAudio.framework */; };
+		3FB5C354242A367700189EFB /* libPublicUtility.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB5C2E7242A2C4F00189EFB /* libPublicUtility.a */; };
+		3FB5C356242A374D00189EFB /* EFF_PlugInInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C355242A374D00189EFB /* EFF_PlugInInterface.cpp */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		3FB5C2AD242A1DB500189EFB /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		3FB5C2AF242A1DB500189EFB /* effervescence-core */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "effervescence-core"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB5C2B2242A1DB500189EFB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3FB5C2BA242A1DD700189EFB /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		3FB5C2BC242A1DE600189EFB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		3FB5C2BE242A1DFA00189EFB /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		3FB5C2C0242A1E0500189EFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3FB5C2C3242A1EC000189EFB /* CADebugger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CADebugger.h; sourceTree = "<group>"; };
+		3FB5C2C4242A1EC000189EFB /* CACFNumber.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CACFNumber.cpp; sourceTree = "<group>"; };
+		3FB5C2C5242A1EC000189EFB /* CAAtomic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAtomic.h; sourceTree = "<group>"; };
+		3FB5C2C6242A1EC000189EFB /* CAException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAException.h; sourceTree = "<group>"; };
+		3FB5C2C7242A1EC000189EFB /* CACFDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CACFDictionary.h; sourceTree = "<group>"; };
+		3FB5C2C8242A1EC000189EFB /* CAPThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAPThread.h; sourceTree = "<group>"; };
+		3FB5C2C9242A1EC000189EFB /* CAVolumeCurve.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAVolumeCurve.cpp; sourceTree = "<group>"; };
+		3FB5C2CA242A1EC000189EFB /* CAVolumeCurve.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAVolumeCurve.h; sourceTree = "<group>"; };
+		3FB5C2CB242A1EC000189EFB /* CACFNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CACFNumber.h; sourceTree = "<group>"; };
+		3FB5C2CC242A1EC000189EFB /* CACFString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CACFString.h; sourceTree = "<group>"; };
+		3FB5C2CD242A1EC000189EFB /* CAHostTimeBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAHostTimeBase.h; sourceTree = "<group>"; };
+		3FB5C2CE242A1EC000189EFB /* CADebugMacros.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
+		3FB5C2CF242A1EC000189EFB /* CACFDictionary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CACFDictionary.cpp; sourceTree = "<group>"; };
+		3FB5C2D0242A1EC000189EFB /* CAMutex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAMutex.h; sourceTree = "<group>"; };
+		3FB5C2D1242A1EC000189EFB /* CACFString.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CACFString.cpp; sourceTree = "<group>"; };
+		3FB5C2D2242A1EC000189EFB /* CADebugPrintf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CADebugPrintf.h; sourceTree = "<group>"; };
+		3FB5C2D3242A1EC000189EFB /* CABitOperations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CABitOperations.h; sourceTree = "<group>"; };
+		3FB5C2D4242A1EC000189EFB /* CAPropertyAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAPropertyAddress.h; sourceTree = "<group>"; };
+		3FB5C2D5242A1EC000189EFB /* CADispatchQueue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CADispatchQueue.cpp; sourceTree = "<group>"; };
+		3FB5C2D6242A1EC000189EFB /* CARingBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CARingBuffer.h; sourceTree = "<group>"; };
+		3FB5C2D7242A1EC000189EFB /* CAPThread.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAPThread.cpp; sourceTree = "<group>"; };
+		3FB5C2D8242A1EC000189EFB /* CAAutoDisposer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAutoDisposer.h; sourceTree = "<group>"; };
+		3FB5C2D9242A1EC000189EFB /* CADispatchQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CADispatchQueue.h; sourceTree = "<group>"; };
+		3FB5C2DA242A1EC000189EFB /* CADebugMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		3FB5C2DB242A1EC000189EFB /* CADebugPrintf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugPrintf.cpp; sourceTree = "<group>"; };
+		3FB5C2DC242A1EC000189EFB /* CARingBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CARingBuffer.cpp; sourceTree = "<group>"; };
+		3FB5C2DD242A1EC000189EFB /* CAHostTimeBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAHostTimeBase.cpp; sourceTree = "<group>"; };
+		3FB5C2DE242A1EC000189EFB /* CACFArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CACFArray.h; sourceTree = "<group>"; };
+		3FB5C2DF242A1EC000189EFB /* CAAtomicStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAtomicStack.h; sourceTree = "<group>"; };
+		3FB5C2E0242A1EC000189EFB /* CAMutex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAMutex.cpp; sourceTree = "<group>"; };
+		3FB5C2E1242A1EC000189EFB /* CADebugger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugger.cpp; sourceTree = "<group>"; };
+		3FB5C2E2242A1EC000189EFB /* CACFArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CACFArray.cpp; sourceTree = "<group>"; };
+		3FB5C2E7242A2C4F00189EFB /* libPublicUtility.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPublicUtility.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FB5C34A242A34F300189EFB /* effervescence-driver.driver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "effervescence-driver.driver"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FB5C34C242A34F300189EFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FB5C355242A374D00189EFB /* EFF_PlugInInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_PlugInInterface.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3FB5C2AC242A1DB500189EFB /* Frameworks */ = {
+		3FB5C2E5242A2C4F00189EFB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB5C347242A34F300189EFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB5C350242A367500189EFB /* Foundation.framework in Frameworks */,
+				3FB5C354242A367700189EFB /* libPublicUtility.a in Frameworks */,
+				3FB5C351242A367500189EFB /* Accelerate.framework in Frameworks */,
+				3FB5C352242A367500189EFB /* CoreFoundation.framework in Frameworks */,
+				3FB5C353242A367500189EFB /* CoreAudio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,14 +100,18 @@
 			isa = PBXGroup;
 			children = (
 				3FB5C2B1242A1DB500189EFB /* effervescence-core */,
+				3FB5C2C2242A1EC000189EFB /* PublicUtility */,
+				3FB5C34B242A34F300189EFB /* effervescence-driver */,
 				3FB5C2B0242A1DB500189EFB /* Products */,
+				3FB5C2B9242A1DD700189EFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		3FB5C2B0242A1DB500189EFB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3FB5C2AF242A1DB500189EFB /* effervescence-core */,
+				3FB5C2E7242A2C4F00189EFB /* libPublicUtility.a */,
+				3FB5C34A242A34F300189EFB /* effervescence-driver.driver */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,25 +124,112 @@
 			path = "effervescence-core";
 			sourceTree = "<group>";
 		};
+		3FB5C2B9242A1DD700189EFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FB5C2C0242A1E0500189EFB /* Foundation.framework */,
+				3FB5C2BE242A1DFA00189EFB /* Accelerate.framework */,
+				3FB5C2BC242A1DE600189EFB /* CoreFoundation.framework */,
+				3FB5C2BA242A1DD700189EFB /* CoreAudio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FB5C2C2242A1EC000189EFB /* PublicUtility */ = {
+			isa = PBXGroup;
+			children = (
+				3FB5C2C5242A1EC000189EFB /* CAAtomic.h */,
+				3FB5C2DF242A1EC000189EFB /* CAAtomicStack.h */,
+				3FB5C2D8242A1EC000189EFB /* CAAutoDisposer.h */,
+				3FB5C2D3242A1EC000189EFB /* CABitOperations.h */,
+				3FB5C2E2242A1EC000189EFB /* CACFArray.cpp */,
+				3FB5C2DE242A1EC000189EFB /* CACFArray.h */,
+				3FB5C2CF242A1EC000189EFB /* CACFDictionary.cpp */,
+				3FB5C2C7242A1EC000189EFB /* CACFDictionary.h */,
+				3FB5C2C4242A1EC000189EFB /* CACFNumber.cpp */,
+				3FB5C2CB242A1EC000189EFB /* CACFNumber.h */,
+				3FB5C2D1242A1EC000189EFB /* CACFString.cpp */,
+				3FB5C2CC242A1EC000189EFB /* CACFString.h */,
+				3FB5C2E1242A1EC000189EFB /* CADebugger.cpp */,
+				3FB5C2C3242A1EC000189EFB /* CADebugger.h */,
+				3FB5C2CE242A1EC000189EFB /* CADebugMacros.cpp */,
+				3FB5C2DA242A1EC000189EFB /* CADebugMacros.h */,
+				3FB5C2DB242A1EC000189EFB /* CADebugPrintf.cpp */,
+				3FB5C2D2242A1EC000189EFB /* CADebugPrintf.h */,
+				3FB5C2D5242A1EC000189EFB /* CADispatchQueue.cpp */,
+				3FB5C2D9242A1EC000189EFB /* CADispatchQueue.h */,
+				3FB5C2C6242A1EC000189EFB /* CAException.h */,
+				3FB5C2DD242A1EC000189EFB /* CAHostTimeBase.cpp */,
+				3FB5C2CD242A1EC000189EFB /* CAHostTimeBase.h */,
+				3FB5C2E0242A1EC000189EFB /* CAMutex.cpp */,
+				3FB5C2D0242A1EC000189EFB /* CAMutex.h */,
+				3FB5C2D4242A1EC000189EFB /* CAPropertyAddress.h */,
+				3FB5C2D7242A1EC000189EFB /* CAPThread.cpp */,
+				3FB5C2C8242A1EC000189EFB /* CAPThread.h */,
+				3FB5C2DC242A1EC000189EFB /* CARingBuffer.cpp */,
+				3FB5C2D6242A1EC000189EFB /* CARingBuffer.h */,
+				3FB5C2C9242A1EC000189EFB /* CAVolumeCurve.cpp */,
+				3FB5C2CA242A1EC000189EFB /* CAVolumeCurve.h */,
+			);
+			path = PublicUtility;
+			sourceTree = "<group>";
+		};
+		3FB5C34B242A34F300189EFB /* effervescence-driver */ = {
+			isa = PBXGroup;
+			children = (
+				3FB5C34C242A34F300189EFB /* Info.plist */,
+				3FB5C355242A374D00189EFB /* EFF_PlugInInterface.cpp */,
+			);
+			path = "effervescence-driver";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		3FB5C2E3242A2C4F00189EFB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB5C2EB242A325400189EFB /* CABitOperations.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		3FB5C2AE242A1DB500189EFB /* effervescence-core */ = {
+		3FB5C2E6242A2C4F00189EFB /* PublicUtility */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FB5C2B6242A1DB500189EFB /* Build configuration list for PBXNativeTarget "effervescence-core" */;
+			buildConfigurationList = 3FB5C2E8242A2C4F00189EFB /* Build configuration list for PBXNativeTarget "PublicUtility" */;
 			buildPhases = (
-				3FB5C2AB242A1DB500189EFB /* Sources */,
-				3FB5C2AC242A1DB500189EFB /* Frameworks */,
-				3FB5C2AD242A1DB500189EFB /* CopyFiles */,
+				3FB5C2E3242A2C4F00189EFB /* Headers */,
+				3FB5C2E4242A2C4F00189EFB /* Sources */,
+				3FB5C2E5242A2C4F00189EFB /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "effervescence-core";
-			productName = "effervescence-core";
-			productReference = 3FB5C2AF242A1DB500189EFB /* effervescence-core */;
-			productType = "com.apple.product-type.tool";
+			name = PublicUtility;
+			productName = PublicUtility;
+			productReference = 3FB5C2E7242A2C4F00189EFB /* libPublicUtility.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3FB5C349242A34F300189EFB /* effervescence-driver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FB5C34D242A34F300189EFB /* Build configuration list for PBXNativeTarget "effervescence-driver" */;
+			buildPhases = (
+				3FB5C346242A34F300189EFB /* Sources */,
+				3FB5C347242A34F300189EFB /* Frameworks */,
+				3FB5C348242A34F300189EFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "effervescence-driver";
+			productName = "effervescence-driver";
+			productReference = 3FB5C34A242A34F300189EFB /* effervescence-driver.driver */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -88,10 +237,14 @@
 		3FB5C2A7242A1DB500189EFB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = EFF_;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = nerrons;
 				TargetAttributes = {
-					3FB5C2AE242A1DB500189EFB = {
+					3FB5C2E6242A2C4F00189EFB = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					3FB5C349242A34F300189EFB = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
@@ -102,24 +255,54 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = 3FB5C2A6242A1DB500189EFB;
 			productRefGroup = 3FB5C2B0242A1DB500189EFB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3FB5C2AE242A1DB500189EFB /* effervescence-core */,
+				3FB5C2E6242A2C4F00189EFB /* PublicUtility */,
+				3FB5C349242A34F300189EFB /* effervescence-driver */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		3FB5C348242A34F300189EFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		3FB5C2AB242A1DB500189EFB /* Sources */ = {
+		3FB5C2E4242A2C4F00189EFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FB5C2B3242A1DB500189EFB /* main.cpp in Sources */,
+				3FB5C2EC242A328400189EFB /* CACFArray.cpp in Sources */,
+				3FB5C2ED242A328900189EFB /* CACFDictionary.cpp in Sources */,
+				3FB5C2F1242A32AA00189EFB /* CADebugger.cpp in Sources */,
+				3FB5C2F7242A32C700189EFB /* CAPThread.cpp in Sources */,
+				3FB5C2F8242A32CA00189EFB /* CAVolumeCurve.cpp in Sources */,
+				3FB5C2F5242A32BF00189EFB /* CAHostTimeBase.cpp in Sources */,
+				3FB5C2F4242A32B800189EFB /* CADebugPrintf.cpp in Sources */,
+				3FB5C2F6242A32C500189EFB /* CAMutex.cpp in Sources */,
+				3FB5C2F3242A32B200189EFB /* CADispatchQueue.cpp in Sources */,
+				3FB5C2F2242A32AB00189EFB /* CADebugMacros.cpp in Sources */,
+				3FB5C2F0242A329900189EFB /* CARingBuffer.cpp in Sources */,
+				3FB5C2EF242A329100189EFB /* CACFString.cpp in Sources */,
+				3FB5C2EE242A328D00189EFB /* CACFNumber.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB5C346242A34F300189EFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB5C356242A374D00189EFB /* EFF_PlugInInterface.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +315,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -162,13 +345,16 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
-					"$(inherited)",
+					"CoreAudio_UseSysLog=1",
+					"CoreAudio_Debug=1",
+					"CoreAudio_StopOnAssert=1",
+					"CoreAudio_ThreadStampMessages=0",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -190,7 +376,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -220,8 +406,16 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=0",
+					"CoreAudio_Debug=0",
+					"CoreAudio_UseSysLog=1",
+					"CoreAudio_StopOnAssert=0",
+					"CoreAudio_ThreadStampMessages=0",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -235,23 +429,60 @@
 			};
 			name = Release;
 		};
-		3FB5C2B7242A1DB500189EFB /* Debug */ = {
+		3FB5C2E9242A2C4F00189EFB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7RC9R8AS63;
-				ENABLE_HARDENED_RUNTIME = YES;
+				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		3FB5C2B8242A1DB500189EFB /* Release */ = {
+		3FB5C2EA242A2C4F00189EFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7RC9R8AS63;
-				ENABLE_HARDENED_RUNTIME = YES;
+				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3FB5C34E242A34F300189EFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7RC9R8AS63;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "effervescence-driver/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/HAL";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nerrons.effervescence-driver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = driver;
+			};
+			name = Debug;
+		};
+		3FB5C34F242A34F300189EFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7RC9R8AS63;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				INFOPLIST_FILE = "effervescence-driver/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/HAL";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nerrons.effervescence-driver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = driver;
 			};
 			name = Release;
 		};
@@ -267,11 +498,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3FB5C2B6242A1DB500189EFB /* Build configuration list for PBXNativeTarget "effervescence-core" */ = {
+		3FB5C2E8242A2C4F00189EFB /* Build configuration list for PBXNativeTarget "PublicUtility" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3FB5C2B7242A1DB500189EFB /* Debug */,
-				3FB5C2B8242A1DB500189EFB /* Release */,
+				3FB5C2E9242A2C4F00189EFB /* Debug */,
+				3FB5C2EA242A2C4F00189EFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FB5C34D242A34F300189EFB /* Build configuration list for PBXNativeTarget "effervescence-driver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB5C34E242A34F300189EFB /* Debug */,
+				3FB5C34F242A34F300189EFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
