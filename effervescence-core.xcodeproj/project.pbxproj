@@ -31,6 +31,7 @@
 		3FB5C381242A5C7B00189EFB /* EFF_Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C37F242A5C7B00189EFB /* EFF_Object.cpp */; };
 		3FB5C384242A66A300189EFB /* EFF_AbstractDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C383242A66A300189EFB /* EFF_AbstractDevice.cpp */; };
 		3FB5C387242A6EF000189EFB /* EFF_NullDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C386242A6EF000189EFB /* EFF_NullDevice.cpp */; };
+		3FB5C38A242A729C00189EFB /* EFF_Stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C389242A729C00189EFB /* EFF_Stream.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		3FB5C385242A6C7D00189EFB /* EFF_NullDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_NullDevice.h; sourceTree = SOURCE_ROOT; };
 		3FB5C386242A6EF000189EFB /* EFF_NullDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_NullDevice.cpp; sourceTree = SOURCE_ROOT; };
 		3FB5C388242A719B00189EFB /* EFF_Stream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_Stream.h; sourceTree = SOURCE_ROOT; };
+		3FB5C389242A729C00189EFB /* EFF_Stream.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_Stream.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 				3FB5C385242A6C7D00189EFB /* EFF_NullDevice.h */,
 				3FB5C386242A6EF000189EFB /* EFF_NullDevice.cpp */,
 				3FB5C388242A719B00189EFB /* EFF_Stream.h */,
+				3FB5C389242A729C00189EFB /* EFF_Stream.cpp */,
 			);
 			path = "effervescence-driver";
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				3FB5C384242A66A300189EFB /* EFF_AbstractDevice.cpp in Sources */,
 				3FB5C387242A6EF000189EFB /* EFF_NullDevice.cpp in Sources */,
 				3FB5C356242A374D00189EFB /* EFF_PlugInInterface.cpp in Sources */,
+				3FB5C38A242A729C00189EFB /* EFF_Stream.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
