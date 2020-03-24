@@ -27,6 +27,9 @@
 		3FB5C353242A367500189EFB /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB5C2BA242A1DD700189EFB /* CoreAudio.framework */; };
 		3FB5C354242A367700189EFB /* libPublicUtility.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FB5C2E7242A2C4F00189EFB /* libPublicUtility.a */; };
 		3FB5C356242A374D00189EFB /* EFF_PlugInInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C355242A374D00189EFB /* EFF_PlugInInterface.cpp */; };
+		3FB5C37C242A4C8400189EFB /* set-version.sh in Resources */ = {isa = PBXBuildFile; fileRef = 3FB5C37B242A4C8400189EFB /* set-version.sh */; };
+		3FB5C381242A5C7B00189EFB /* EFF_Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C37F242A5C7B00189EFB /* EFF_Object.cpp */; };
+		3FB5C384242A66A300189EFB /* EFF_AbstractDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C383242A66A300189EFB /* EFF_AbstractDevice.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +74,16 @@
 		3FB5C34A242A34F300189EFB /* effervescence-driver.driver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "effervescence-driver.driver"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB5C34C242A34F300189EFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FB5C355242A374D00189EFB /* EFF_PlugInInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_PlugInInterface.cpp; sourceTree = SOURCE_ROOT; };
+		3FB5C361242A3D8B00189EFB /* EFF_Types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_Types.h; sourceTree = "<group>"; };
+		3FB5C378242A4A7800189EFB /* EFF_Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_Utils.h; sourceTree = "<group>"; };
+		3FB5C379242A4B7B00189EFB /* EFF_Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_Utils.cpp; sourceTree = "<group>"; };
+		3FB5C37B242A4C8400189EFB /* set-version.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "set-version.sh"; sourceTree = "<group>"; };
+		3FB5C37D242A4C9B00189EFB /* EFF_TestUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_TestUtils.h; sourceTree = "<group>"; };
+		3FB5C37E242A4D1400189EFB /* EFFXPCProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFFXPCProtocols.h; sourceTree = "<group>"; };
+		3FB5C37F242A5C7B00189EFB /* EFF_Object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_Object.cpp; sourceTree = SOURCE_ROOT; };
+		3FB5C380242A5C7B00189EFB /* EFF_Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_Object.h; sourceTree = SOURCE_ROOT; };
+		3FB5C382242A64EA00189EFB /* EFF_AbstractDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_AbstractDevice.h; sourceTree = SOURCE_ROOT; };
+		3FB5C383242A66A300189EFB /* EFF_AbstractDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_AbstractDevice.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +112,7 @@
 		3FB5C2A6242A1DB500189EFB = {
 			isa = PBXGroup;
 			children = (
+				3FB5C357242A3D0D00189EFB /* SharedSource */,
 				3FB5C2B1242A1DB500189EFB /* effervescence-core */,
 				3FB5C2C2242A1EC000189EFB /* PublicUtility */,
 				3FB5C34B242A34F300189EFB /* effervescence-driver */,
@@ -179,8 +193,25 @@
 			children = (
 				3FB5C34C242A34F300189EFB /* Info.plist */,
 				3FB5C355242A374D00189EFB /* EFF_PlugInInterface.cpp */,
+				3FB5C37F242A5C7B00189EFB /* EFF_Object.cpp */,
+				3FB5C380242A5C7B00189EFB /* EFF_Object.h */,
+				3FB5C382242A64EA00189EFB /* EFF_AbstractDevice.h */,
+				3FB5C383242A66A300189EFB /* EFF_AbstractDevice.cpp */,
 			);
 			path = "effervescence-driver";
+			sourceTree = "<group>";
+		};
+		3FB5C357242A3D0D00189EFB /* SharedSource */ = {
+			isa = PBXGroup;
+			children = (
+				3FB5C37B242A4C8400189EFB /* set-version.sh */,
+				3FB5C361242A3D8B00189EFB /* EFF_Types.h */,
+				3FB5C378242A4A7800189EFB /* EFF_Utils.h */,
+				3FB5C379242A4B7B00189EFB /* EFF_Utils.cpp */,
+				3FB5C37D242A4C9B00189EFB /* EFF_TestUtils.h */,
+				3FB5C37E242A4D1400189EFB /* EFFXPCProtocols.h */,
+			);
+			path = SharedSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB5C37C242A4C8400189EFB /* set-version.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +334,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB5C381242A5C7B00189EFB /* EFF_Object.cpp in Sources */,
+				3FB5C384242A66A300189EFB /* EFF_AbstractDevice.cpp in Sources */,
 				3FB5C356242A374D00189EFB /* EFF_PlugInInterface.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,7 +496,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "effervescence-driver/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/HAL";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nerrons.effervescence-driver";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nerrons.effervescence.driver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = driver;
@@ -479,7 +513,7 @@
 				GCC_C_LANGUAGE_STANDARD = c11;
 				INFOPLIST_FILE = "effervescence-driver/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/HAL";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nerrons.effervescence-driver";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nerrons.effervescence.driver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = driver;
