@@ -21,7 +21,7 @@
 // Fails the test if f doesn't throw ExpectedException when run.
 // (The "self" argument is required by XCTFail, presumably so it can report the context.)
 template<typename ExpectedException>
-void BGMShouldThrow(XCTestCase* self, const std::function<void()>& f)
+void EFFShouldThrow(XCTestCase* self, const std::function<void()>& f)
 {
     try
     {
