@@ -79,6 +79,131 @@ enum
 
 #pragma mark EFFDevice Custom Properties
 
+enum
+{
+    // TODO: Combine the two music player properties
+    
+    // The process ID of the music player as a CFNumber. Setting this property will also clear the value of
+    // kAudioDeviceCustomPropertyMusicPlayerBundleID. We use 0 to mean unset.
+    //
+    // There is currently no way for a client to tell whether the process it has set as the music player is a
+    // client of the BGMDevice.
+    kAudioDeviceCustomPropertyMusicPlayerProcessID                    = 'mppi',
+    // The music player's bundle ID as a CFString (UTF8), or the empty string if it's unset/null. Setting this
+    // property will also clear the value of kAudioDeviceCustomPropertyMusicPlayerProcessID.
+    kAudioDeviceCustomPropertyMusicPlayerBundleID                     = 'mpbi',
+    // A CFNumber that specifies whether the device is silent, playing only music (i.e. the client set as the
+    // music player is the only client playing audio) or audible. See enum values below. This property is only
+    // updated after the audible state has been different for kDeviceAudibleStateMinChangedFramesForUpdate
+    // consecutive frames. (To avoid excessive CPU use if for some reason the audible state starts changing
+    // very often.)
+    kAudioDeviceCustomPropertyDeviceAudibleState                      = 'daud',
+    // A CFBoolean similar to kAudioDevicePropertyDeviceIsRunning except it ignores whether IO is running for
+    // BGMApp. This is so BGMApp knows when it can stop doing IO to save CPU.
+    kAudioDeviceCustomPropertyDeviceIsRunningSomewhereOtherThanBGMApp = 'runo',
+    // A CFArray of CFDictionaries that each contain an app's pid, bundle ID and volume relative to other
+    // running apps. See the dictionary keys below for more info.
+    //
+    // Getting this property will only return apps with volumes other than the default. Setting this property
+    // will add new app volumes or replace existing ones, but there's currently no way to delete an app from
+    // the internal collection.
+    kAudioDeviceCustomPropertyAppVolumes                              = 'apvs',
+    // A CFArray of CFBooleans indicating which of BGMDevice's controls are enabled. All controls are enabled
+    // by default. This property is settable. See the array indices below for more info.
+    kAudioDeviceCustomPropertyEnabledOutputControls                   = 'bgct'
+};
+
+// The number of silent/audible frames before BGMDriver will change kAudioDeviceCustomPropertyDeviceAudibleState
+#define kDeviceAudibleStateMinChangedFramesForUpdate (2 << 11)
+
+enum BGMDeviceAudibleState : SInt32
+{
+    // kAudioDeviceCustomPropertyDeviceAudibleState values
+    //
+    // No audio is playing on the device's streams (regardless of whether IO is running or not)
+    kBGMDeviceIsSilent              = 'silt',
+    // The client whose bundle ID matches the current value of kCustomAudioDevicePropertyMusicPlayerBundleID is the
+    // only audible client
+    kBGMDeviceIsSilentExceptMusic   = 'olym',
+    kBGMDeviceIsAudible             = 'audi'
+};
+
+// kAudioDeviceCustomPropertyAppVolumes keys
+//
+// A CFNumber<SInt32> between kAppRelativeVolumeMinRawValue and kAppRelativeVolumeMaxRawValue. A value greater than
+// the midpoint increases the client's volume and a value less than the midpoint decreases it. A volume curve is
+// applied to kBGMAppVolumesKey_RelativeVolume when it's first set and then each of the app's samples are multiplied
+// by it.
+#define kBGMAppVolumesKey_RelativeVolume    "rvol"
+// A CFNumber<SInt32> between kAppPanLeftRawValue and kAppPanRightRawValue. A negative value has a higher proportion
+// of left channel, and a positive value has a higher proportion of right channel.
+#define kBGMAppVolumesKey_PanPosition       "ppos"
+// The app's pid as a CFNumber. May be omitted if kBGMAppVolumesKey_BundleID is present.
+#define kBGMAppVolumesKey_ProcessID         "pid"
+// The app's bundle ID as a CFString. May be omitted if kBGMAppVolumesKey_ProcessID is present.
+#define kBGMAppVolumesKey_BundleID          "bid"
+
+// Volume curve range for app volumes
+#define kAppRelativeVolumeMaxRawValue   100
+#define kAppRelativeVolumeMinRawValue   0
+#define kAppRelativeVolumeMinDbValue    -96.0f
+#define kAppRelativeVolumeMaxDbValue    0.0f
+
+// Pan position values
+#define kAppPanLeftRawValue   -100
+#define kAppPanCenterRawValue 0
+#define kAppPanRightRawValue  100
+
+// kAudioDeviceCustomPropertyEnabledOutputControls indices
+enum
+{
+    // True if BGMDevice's master output volume control is enabled.
+    kBGMEnabledOutputControlsIndex_Volume = 0,
+    // True if BGMDevice's master output mute control is enabled.
+    kBGMEnabledOutputControlsIndex_Mute   = 1
+};
+
+
+#pragma mark BGMDevice Custom Property Addresses
+
+// For convenience.
+
+static const AudioObjectPropertyAddress kBGMMusicPlayerProcessIDAddress = {
+    kAudioDeviceCustomPropertyMusicPlayerProcessID,
+    kAudioObjectPropertyScopeGlobal,
+    kAudioObjectPropertyElementMaster
+};
+
+static const AudioObjectPropertyAddress kBGMMusicPlayerBundleIDAddress = {
+    kAudioDeviceCustomPropertyMusicPlayerBundleID,
+    kAudioObjectPropertyScopeGlobal,
+    kAudioObjectPropertyElementMaster
+};
+
+static const AudioObjectPropertyAddress kBGMAudibleStateAddress = {
+    kAudioDeviceCustomPropertyDeviceAudibleState,
+    kAudioObjectPropertyScopeGlobal,
+    kAudioObjectPropertyElementMaster
+};
+
+static const AudioObjectPropertyAddress kBGMRunningSomewhereOtherThanBGMAppAddress = {
+    kAudioDeviceCustomPropertyDeviceIsRunningSomewhereOtherThanBGMApp,
+    kAudioObjectPropertyScopeGlobal,
+    kAudioObjectPropertyElementMaster
+};
+
+static const AudioObjectPropertyAddress kBGMAppVolumesAddress = {
+    kAudioDeviceCustomPropertyAppVolumes,
+    kAudioObjectPropertyScopeGlobal,
+    kAudioObjectPropertyElementMaster
+};
+
+static const AudioObjectPropertyAddress kBGMEnabledOutputControlsAddress = {
+    kAudioDeviceCustomPropertyEnabledOutputControls,
+    kAudioObjectPropertyScopeOutput,
+    kAudioObjectPropertyElementMaster
+};
+
 
 #pragma mark XPC Return Codes
 
