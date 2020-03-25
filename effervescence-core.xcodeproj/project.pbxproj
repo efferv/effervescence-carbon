@@ -33,6 +33,8 @@
 		3FB5C387242A6EF000189EFB /* EFF_NullDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C386242A6EF000189EFB /* EFF_NullDevice.cpp */; };
 		3FB5C38A242A729C00189EFB /* EFF_Stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C389242A729C00189EFB /* EFF_Stream.cpp */; };
 		3FB5C38D242A864300189EFB /* EFF_Control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C38C242A864300189EFB /* EFF_Control.cpp */; };
+		3FB5C390242B13B200189EFB /* EFF_TaskQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C38F242B13B200189EFB /* EFF_TaskQueue.cpp */; };
+		3FB5C393242B491C00189EFB /* EFF_Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C392242B491C00189EFB /* EFF_Client.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +95,10 @@
 		3FB5C389242A729C00189EFB /* EFF_Stream.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_Stream.cpp; sourceTree = SOURCE_ROOT; };
 		3FB5C38B242A858100189EFB /* EFF_Control.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_Control.h; sourceTree = SOURCE_ROOT; };
 		3FB5C38C242A864300189EFB /* EFF_Control.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_Control.cpp; sourceTree = SOURCE_ROOT; };
+		3FB5C38E242A880C00189EFB /* EFF_TaskQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_TaskQueue.h; sourceTree = SOURCE_ROOT; };
+		3FB5C38F242B13B200189EFB /* EFF_TaskQueue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_TaskQueue.cpp; sourceTree = SOURCE_ROOT; };
+		3FB5C391242B42A600189EFB /* EFF_Client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_Client.h; sourceTree = SOURCE_ROOT; };
+		3FB5C392242B491C00189EFB /* EFF_Client.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_Client.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +218,10 @@
 				3FB5C389242A729C00189EFB /* EFF_Stream.cpp */,
 				3FB5C38B242A858100189EFB /* EFF_Control.h */,
 				3FB5C38C242A864300189EFB /* EFF_Control.cpp */,
+				3FB5C38E242A880C00189EFB /* EFF_TaskQueue.h */,
+				3FB5C38F242B13B200189EFB /* EFF_TaskQueue.cpp */,
+				3FB5C391242B42A600189EFB /* EFF_Client.h */,
+				3FB5C392242B491C00189EFB /* EFF_Client.cpp */,
 			);
 			path = "effervescence-driver";
 			sourceTree = "<group>";
@@ -350,10 +360,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FB5C381242A5C7B00189EFB /* EFF_Object.cpp in Sources */,
+				3FB5C390242B13B200189EFB /* EFF_TaskQueue.cpp in Sources */,
 				3FB5C38D242A864300189EFB /* EFF_Control.cpp in Sources */,
 				3FB5C384242A66A300189EFB /* EFF_AbstractDevice.cpp in Sources */,
 				3FB5C387242A6EF000189EFB /* EFF_NullDevice.cpp in Sources */,
 				3FB5C356242A374D00189EFB /* EFF_PlugInInterface.cpp in Sources */,
+				3FB5C393242B491C00189EFB /* EFF_Client.cpp in Sources */,
 				3FB5C38A242A729C00189EFB /* EFF_Stream.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
