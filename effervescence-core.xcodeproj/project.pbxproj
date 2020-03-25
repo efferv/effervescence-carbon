@@ -35,6 +35,7 @@
 		3FB5C38D242A864300189EFB /* EFF_Control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C38C242A864300189EFB /* EFF_Control.cpp */; };
 		3FB5C390242B13B200189EFB /* EFF_TaskQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C38F242B13B200189EFB /* EFF_TaskQueue.cpp */; };
 		3FB5C393242B491C00189EFB /* EFF_Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C392242B491C00189EFB /* EFF_Client.cpp */; };
+		3FB5C396242B5E2700189EFB /* EFF_ClientMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C395242B5E2700189EFB /* EFF_ClientMap.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +100,8 @@
 		3FB5C38F242B13B200189EFB /* EFF_TaskQueue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_TaskQueue.cpp; sourceTree = SOURCE_ROOT; };
 		3FB5C391242B42A600189EFB /* EFF_Client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_Client.h; sourceTree = SOURCE_ROOT; };
 		3FB5C392242B491C00189EFB /* EFF_Client.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_Client.cpp; sourceTree = SOURCE_ROOT; };
+		3FB5C394242B4A1F00189EFB /* EFF_ClientMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_ClientMap.h; sourceTree = SOURCE_ROOT; };
+		3FB5C395242B5E2700189EFB /* EFF_ClientMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_ClientMap.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +225,8 @@
 				3FB5C38F242B13B200189EFB /* EFF_TaskQueue.cpp */,
 				3FB5C391242B42A600189EFB /* EFF_Client.h */,
 				3FB5C392242B491C00189EFB /* EFF_Client.cpp */,
+				3FB5C394242B4A1F00189EFB /* EFF_ClientMap.h */,
+				3FB5C395242B5E2700189EFB /* EFF_ClientMap.cpp */,
 			);
 			path = "effervescence-driver";
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 				3FB5C384242A66A300189EFB /* EFF_AbstractDevice.cpp in Sources */,
 				3FB5C387242A6EF000189EFB /* EFF_NullDevice.cpp in Sources */,
 				3FB5C356242A374D00189EFB /* EFF_PlugInInterface.cpp in Sources */,
+				3FB5C396242B5E2700189EFB /* EFF_ClientMap.cpp in Sources */,
 				3FB5C393242B491C00189EFB /* EFF_Client.cpp in Sources */,
 				3FB5C38A242A729C00189EFB /* EFF_Stream.cpp in Sources */,
 			);
