@@ -39,6 +39,8 @@
 		3FB5C399242CD7CE00189EFB /* EFF_Clients.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C398242CD7CE00189EFB /* EFF_Clients.cpp */; };
 		3FB5C39D242D059B00189EFB /* EFF_WrappedAudioEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C39C242D059B00189EFB /* EFF_WrappedAudioEngine.cpp */; };
 		3FB5C3A0242D07A200189EFB /* EFF_AudibleState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C39F242D07A200189EFB /* EFF_AudibleState.cpp */; };
+		3FB5C3A5242D406400189EFB /* EFF_VolumeControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C3A4242D406400189EFB /* EFF_VolumeControl.cpp */; };
+		3FB5C3A8242D40DF00189EFB /* EFF_MuteControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C3A7242D40DF00189EFB /* EFF_MuteControl.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +114,10 @@
 		3FB5C39C242D059B00189EFB /* EFF_WrappedAudioEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_WrappedAudioEngine.cpp; sourceTree = SOURCE_ROOT; };
 		3FB5C39E242D05EB00189EFB /* EFF_AudibleState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_AudibleState.h; sourceTree = SOURCE_ROOT; };
 		3FB5C39F242D07A200189EFB /* EFF_AudibleState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_AudibleState.cpp; sourceTree = SOURCE_ROOT; };
+		3FB5C3A1242D402100189EFB /* EFF_VolumeControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_VolumeControl.h; sourceTree = SOURCE_ROOT; };
+		3FB5C3A4242D406400189EFB /* EFF_VolumeControl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_VolumeControl.cpp; sourceTree = SOURCE_ROOT; };
+		3FB5C3A6242D40B800189EFB /* EFF_MuteControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_MuteControl.h; sourceTree = SOURCE_ROOT; };
+		3FB5C3A7242D40DF00189EFB /* EFF_MuteControl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_MuteControl.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +250,10 @@
 				3FB5C39C242D059B00189EFB /* EFF_WrappedAudioEngine.cpp */,
 				3FB5C39E242D05EB00189EFB /* EFF_AudibleState.h */,
 				3FB5C39F242D07A200189EFB /* EFF_AudibleState.cpp */,
+				3FB5C3A1242D402100189EFB /* EFF_VolumeControl.h */,
+				3FB5C3A4242D406400189EFB /* EFF_VolumeControl.cpp */,
+				3FB5C3A6242D40B800189EFB /* EFF_MuteControl.h */,
+				3FB5C3A7242D40DF00189EFB /* EFF_MuteControl.cpp */,
 			);
 			path = "effervescence-driver";
 			sourceTree = "<group>";
@@ -387,7 +397,9 @@
 				3FB5C390242B13B200189EFB /* EFF_TaskQueue.cpp in Sources */,
 				3FB5C38D242A864300189EFB /* EFF_Control.cpp in Sources */,
 				3FB5C384242A66A300189EFB /* EFF_AbstractDevice.cpp in Sources */,
+				3FB5C3A8242D40DF00189EFB /* EFF_MuteControl.cpp in Sources */,
 				3FB5C387242A6EF000189EFB /* EFF_NullDevice.cpp in Sources */,
+				3FB5C3A5242D406400189EFB /* EFF_VolumeControl.cpp in Sources */,
 				3FB5C356242A374D00189EFB /* EFF_PlugInInterface.cpp in Sources */,
 				3FB5C3A0242D07A200189EFB /* EFF_AudibleState.cpp in Sources */,
 				3FB5C396242B5E2700189EFB /* EFF_ClientMap.cpp in Sources */,
