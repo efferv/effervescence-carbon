@@ -29,7 +29,7 @@ class EFF_Client
 {
 
 
-#pragma mark Constructor/Destructor
+#pragma mark Construction/Destruction
 
 public:
                                 EFF_Client() = default;

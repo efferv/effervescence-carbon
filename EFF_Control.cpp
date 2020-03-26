@@ -17,7 +17,7 @@
 #include <CoreAudio/AudioHardwareBase.h>
 
 
-#pragma mark Constructor/Destructor
+#pragma mark Construction/Destruction
 
 EFF_Control::EFF_Control(AudioObjectID inObjectID,
                          AudioClassID inClassID,

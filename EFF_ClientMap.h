@@ -59,7 +59,7 @@ class EFF_ClientMap
     friend class EFF_ClientTasks;
     typedef std::vector<EFF_Client*> EFF_ClientPtrList;
     
-#pragma mark Constructor/Destructor
+#pragma mark Construction/Destruction
     
 public:
                                 EFF_ClientMap(EFF_TaskQueue* inTaskQueue)

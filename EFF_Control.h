@@ -21,7 +21,7 @@ class EFF_Control
 {
 
     
-#pragma mark Constructor/Destructor
+#pragma mark Construction/Destruction
     
 protected:
                         EFF_Control(AudioObjectID inObjectID,

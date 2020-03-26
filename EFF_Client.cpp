@@ -10,7 +10,7 @@
 #include "EFF_Client.h"
 
 
-#pragma mark Constructor/Destructor
+#pragma mark Construction/Destruction
 
 EFF_Client::EFF_Client(const AudioServerPlugInClientInfo* inClientInfo)
 :

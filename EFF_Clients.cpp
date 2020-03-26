@@ -19,7 +19,7 @@
 #include "CADispatchQueue.h"
 
 
-#pragma mark Constructor/Destructor
+#pragma mark Construction/Destruction
 
 EFF_Clients::EFF_Clients(AudioObjectID inOwnerDeviceID,
                          EFF_TaskQueue* inTaskQueue)

@@ -105,6 +105,7 @@
 		3FB5C395242B5E2700189EFB /* EFF_ClientMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_ClientMap.cpp; sourceTree = SOURCE_ROOT; };
 		3FB5C397242CD2CC00189EFB /* EFF_Clients.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_Clients.h; sourceTree = SOURCE_ROOT; };
 		3FB5C398242CD7CE00189EFB /* EFF_Clients.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_Clients.cpp; sourceTree = SOURCE_ROOT; };
+		3FB5C39A242CDD6F00189EFB /* EFF_ClientTasks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_ClientTasks.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +233,7 @@
 				3FB5C395242B5E2700189EFB /* EFF_ClientMap.cpp */,
 				3FB5C397242CD2CC00189EFB /* EFF_Clients.h */,
 				3FB5C398242CD7CE00189EFB /* EFF_Clients.cpp */,
+				3FB5C39A242CDD6F00189EFB /* EFF_ClientTasks.h */,
 			);
 			path = "effervescence-driver";
 			sourceTree = "<group>";

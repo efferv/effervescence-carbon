@@ -44,7 +44,7 @@ class EFF_Clients
     friend class EFF_ClientTasks;
 
 
-#pragma mark Constructor/Destructor
+#pragma mark Construction/Destruction
 
 public:
                                 EFF_Clients(AudioObjectID inOwnerDeviceID, EFF_TaskQueue* inTaskQueue);
@@ -59,10 +59,10 @@ public:
     
 
 #pragma mark API
-    bool                        ClientsRunningIO() const;
+    bool                        ClientsRunningIO() const
                                     { return mStartCount > 0; }
-    bool                        ClientsOtherThanEFFAppRunningIO() const;
-                                    { return mStartCountExcludingBGMApp > 0; }
+    bool                        ClientsOtherThanEFFAppRunningIO() const
+                                    { return mStartCountExcludingEFFApp > 0; }
     bool                        IsEFFApp(UInt32 inClientID) const
                                     { return inClientID == mEFFAppClientID; }
     bool                        EFFAppHasClientRegistered() const
