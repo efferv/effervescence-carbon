@@ -37,6 +37,7 @@
 		3FB5C393242B491C00189EFB /* EFF_Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C392242B491C00189EFB /* EFF_Client.cpp */; };
 		3FB5C396242B5E2700189EFB /* EFF_ClientMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C395242B5E2700189EFB /* EFF_ClientMap.cpp */; };
 		3FB5C399242CD7CE00189EFB /* EFF_Clients.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C398242CD7CE00189EFB /* EFF_Clients.cpp */; };
+		3FB5C39D242D059B00189EFB /* EFF_WrappedAudioEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C39C242D059B00189EFB /* EFF_WrappedAudioEngine.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,8 @@
 		3FB5C397242CD2CC00189EFB /* EFF_Clients.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_Clients.h; sourceTree = SOURCE_ROOT; };
 		3FB5C398242CD7CE00189EFB /* EFF_Clients.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_Clients.cpp; sourceTree = SOURCE_ROOT; };
 		3FB5C39A242CDD6F00189EFB /* EFF_ClientTasks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_ClientTasks.h; sourceTree = SOURCE_ROOT; };
+		3FB5C39B242D054700189EFB /* EFF_WrappedAudioEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_WrappedAudioEngine.h; sourceTree = SOURCE_ROOT; };
+		3FB5C39C242D059B00189EFB /* EFF_WrappedAudioEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_WrappedAudioEngine.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +237,8 @@
 				3FB5C397242CD2CC00189EFB /* EFF_Clients.h */,
 				3FB5C398242CD7CE00189EFB /* EFF_Clients.cpp */,
 				3FB5C39A242CDD6F00189EFB /* EFF_ClientTasks.h */,
+				3FB5C39B242D054700189EFB /* EFF_WrappedAudioEngine.h */,
+				3FB5C39C242D059B00189EFB /* EFF_WrappedAudioEngine.cpp */,
 			);
 			path = "effervescence-driver";
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 			files = (
 				3FB5C399242CD7CE00189EFB /* EFF_Clients.cpp in Sources */,
 				3FB5C381242A5C7B00189EFB /* EFF_Object.cpp in Sources */,
+				3FB5C39D242D059B00189EFB /* EFF_WrappedAudioEngine.cpp in Sources */,
 				3FB5C390242B13B200189EFB /* EFF_TaskQueue.cpp in Sources */,
 				3FB5C38D242A864300189EFB /* EFF_Control.cpp in Sources */,
 				3FB5C384242A66A300189EFB /* EFF_AbstractDevice.cpp in Sources */,
