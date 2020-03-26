@@ -36,6 +36,7 @@
 		3FB5C390242B13B200189EFB /* EFF_TaskQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C38F242B13B200189EFB /* EFF_TaskQueue.cpp */; };
 		3FB5C393242B491C00189EFB /* EFF_Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C392242B491C00189EFB /* EFF_Client.cpp */; };
 		3FB5C396242B5E2700189EFB /* EFF_ClientMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C395242B5E2700189EFB /* EFF_ClientMap.cpp */; };
+		3FB5C399242CD7CE00189EFB /* EFF_Clients.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C398242CD7CE00189EFB /* EFF_Clients.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,8 @@
 		3FB5C392242B491C00189EFB /* EFF_Client.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_Client.cpp; sourceTree = SOURCE_ROOT; };
 		3FB5C394242B4A1F00189EFB /* EFF_ClientMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_ClientMap.h; sourceTree = SOURCE_ROOT; };
 		3FB5C395242B5E2700189EFB /* EFF_ClientMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_ClientMap.cpp; sourceTree = SOURCE_ROOT; };
+		3FB5C397242CD2CC00189EFB /* EFF_Clients.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_Clients.h; sourceTree = SOURCE_ROOT; };
+		3FB5C398242CD7CE00189EFB /* EFF_Clients.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_Clients.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +230,8 @@
 				3FB5C392242B491C00189EFB /* EFF_Client.cpp */,
 				3FB5C394242B4A1F00189EFB /* EFF_ClientMap.h */,
 				3FB5C395242B5E2700189EFB /* EFF_ClientMap.cpp */,
+				3FB5C397242CD2CC00189EFB /* EFF_Clients.h */,
+				3FB5C398242CD7CE00189EFB /* EFF_Clients.cpp */,
 			);
 			path = "effervescence-driver";
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB5C399242CD7CE00189EFB /* EFF_Clients.cpp in Sources */,
 				3FB5C381242A5C7B00189EFB /* EFF_Object.cpp in Sources */,
 				3FB5C390242B13B200189EFB /* EFF_TaskQueue.cpp in Sources */,
 				3FB5C38D242A864300189EFB /* EFF_Control.cpp in Sources */,
