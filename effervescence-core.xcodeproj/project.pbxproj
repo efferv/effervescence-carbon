@@ -38,6 +38,7 @@
 		3FB5C396242B5E2700189EFB /* EFF_ClientMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C395242B5E2700189EFB /* EFF_ClientMap.cpp */; };
 		3FB5C399242CD7CE00189EFB /* EFF_Clients.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C398242CD7CE00189EFB /* EFF_Clients.cpp */; };
 		3FB5C39D242D059B00189EFB /* EFF_WrappedAudioEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C39C242D059B00189EFB /* EFF_WrappedAudioEngine.cpp */; };
+		3FB5C3A0242D07A200189EFB /* EFF_AudibleState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C39F242D07A200189EFB /* EFF_AudibleState.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +110,8 @@
 		3FB5C39A242CDD6F00189EFB /* EFF_ClientTasks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_ClientTasks.h; sourceTree = SOURCE_ROOT; };
 		3FB5C39B242D054700189EFB /* EFF_WrappedAudioEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_WrappedAudioEngine.h; sourceTree = SOURCE_ROOT; };
 		3FB5C39C242D059B00189EFB /* EFF_WrappedAudioEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_WrappedAudioEngine.cpp; sourceTree = SOURCE_ROOT; };
+		3FB5C39E242D05EB00189EFB /* EFF_AudibleState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_AudibleState.h; sourceTree = SOURCE_ROOT; };
+		3FB5C39F242D07A200189EFB /* EFF_AudibleState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_AudibleState.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +242,8 @@
 				3FB5C39A242CDD6F00189EFB /* EFF_ClientTasks.h */,
 				3FB5C39B242D054700189EFB /* EFF_WrappedAudioEngine.h */,
 				3FB5C39C242D059B00189EFB /* EFF_WrappedAudioEngine.cpp */,
+				3FB5C39E242D05EB00189EFB /* EFF_AudibleState.h */,
+				3FB5C39F242D07A200189EFB /* EFF_AudibleState.cpp */,
 			);
 			path = "effervescence-driver";
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 				3FB5C384242A66A300189EFB /* EFF_AbstractDevice.cpp in Sources */,
 				3FB5C387242A6EF000189EFB /* EFF_NullDevice.cpp in Sources */,
 				3FB5C356242A374D00189EFB /* EFF_PlugInInterface.cpp in Sources */,
+				3FB5C3A0242D07A200189EFB /* EFF_AudibleState.cpp in Sources */,
 				3FB5C396242B5E2700189EFB /* EFF_ClientMap.cpp in Sources */,
 				3FB5C393242B491C00189EFB /* EFF_Client.cpp in Sources */,
 				3FB5C38A242A729C00189EFB /* EFF_Stream.cpp in Sources */,

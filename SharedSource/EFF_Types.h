@@ -87,7 +87,7 @@ enum
     // kAudioDeviceCustomPropertyMusicPlayerBundleID. We use 0 to mean unset.
     //
     // There is currently no way for a client to tell whether the process it has set as the music player is a
-    // client of the BGMDevice.
+    // client of the EFFDevice.
     kAudioDeviceCustomPropertyMusicPlayerProcessID                    = 'mppi',
     // The music player's bundle ID as a CFString (UTF8), or the empty string if it's unset/null. Setting this
     // property will also clear the value of kAudioDeviceCustomPropertyMusicPlayerProcessID.
@@ -99,8 +99,8 @@ enum
     // very often.)
     kAudioDeviceCustomPropertyDeviceAudibleState                      = 'daud',
     // A CFBoolean similar to kAudioDevicePropertyDeviceIsRunning except it ignores whether IO is running for
-    // BGMApp. This is so BGMApp knows when it can stop doing IO to save CPU.
-    kAudioDeviceCustomPropertyDeviceIsRunningSomewhereOtherThanBGMApp = 'runo',
+    // EFFApp. This is so EFFApp knows when it can stop doing IO to save CPU.
+    kAudioDeviceCustomPropertyDeviceIsRunningSomewhereOtherThanEFFApp = 'runo',
     // A CFArray of CFDictionaries that each contain an app's pid, bundle ID and volume relative to other
     // running apps. See the dictionary keys below for more info.
     //
@@ -108,40 +108,40 @@ enum
     // will add new app volumes or replace existing ones, but there's currently no way to delete an app from
     // the internal collection.
     kAudioDeviceCustomPropertyAppVolumes                              = 'apvs',
-    // A CFArray of CFBooleans indicating which of BGMDevice's controls are enabled. All controls are enabled
+    // A CFArray of CFBooleans indicating which of EFFDevice's controls are enabled. All controls are enabled
     // by default. This property is settable. See the array indices below for more info.
     kAudioDeviceCustomPropertyEnabledOutputControls                   = 'bgct'
 };
 
-// The number of silent/audible frames before BGMDriver will change kAudioDeviceCustomPropertyDeviceAudibleState
+// The number of silent/audible frames before EFFDriver will change kAudioDeviceCustomPropertyDeviceAudibleState
 #define kDeviceAudibleStateMinChangedFramesForUpdate (2 << 11)
 
-enum BGMDeviceAudibleState : SInt32
+enum EFFDeviceAudibleState : SInt32
 {
     // kAudioDeviceCustomPropertyDeviceAudibleState values
     //
     // No audio is playing on the device's streams (regardless of whether IO is running or not)
-    kBGMDeviceIsSilent              = 'silt',
+    kEFFDeviceIsSilent              = 'silt',
     // The client whose bundle ID matches the current value of kCustomAudioDevicePropertyMusicPlayerBundleID is the
     // only audible client
-    kBGMDeviceIsSilentExceptMusic   = 'olym',
-    kBGMDeviceIsAudible             = 'audi'
+    kEFFDeviceIsSilentExceptMusic   = 'olym',
+    kEFFDeviceIsAudible             = 'audi'
 };
 
 // kAudioDeviceCustomPropertyAppVolumes keys
 //
 // A CFNumber<SInt32> between kAppRelativeVolumeMinRawValue and kAppRelativeVolumeMaxRawValue. A value greater than
 // the midpoint increases the client's volume and a value less than the midpoint decreases it. A volume curve is
-// applied to kBGMAppVolumesKey_RelativeVolume when it's first set and then each of the app's samples are multiplied
+// applied to kEFFAppVolumesKey_RelativeVolume when it's first set and then each of the app's samples are multiplied
 // by it.
-#define kBGMAppVolumesKey_RelativeVolume    "rvol"
+#define kEFFAppVolumesKey_RelativeVolume    "rvol"
 // A CFNumber<SInt32> between kAppPanLeftRawValue and kAppPanRightRawValue. A negative value has a higher proportion
 // of left channel, and a positive value has a higher proportion of right channel.
-#define kBGMAppVolumesKey_PanPosition       "ppos"
-// The app's pid as a CFNumber. May be omitted if kBGMAppVolumesKey_BundleID is present.
-#define kBGMAppVolumesKey_ProcessID         "pid"
-// The app's bundle ID as a CFString. May be omitted if kBGMAppVolumesKey_ProcessID is present.
-#define kBGMAppVolumesKey_BundleID          "bid"
+#define kEFFAppVolumesKey_PanPosition       "ppos"
+// The app's pid as a CFNumber. May be omitted if kEFFAppVolumesKey_BundleID is present.
+#define kEFFAppVolumesKey_ProcessID         "pid"
+// The app's bundle ID as a CFString. May be omitted if kEFFAppVolumesKey_ProcessID is present.
+#define kEFFAppVolumesKey_BundleID          "bid"
 
 // Volume curve range for app volumes
 #define kAppRelativeVolumeMaxRawValue   100
@@ -157,48 +157,48 @@ enum BGMDeviceAudibleState : SInt32
 // kAudioDeviceCustomPropertyEnabledOutputControls indices
 enum
 {
-    // True if BGMDevice's master output volume control is enabled.
-    kBGMEnabledOutputControlsIndex_Volume = 0,
-    // True if BGMDevice's master output mute control is enabled.
-    kBGMEnabledOutputControlsIndex_Mute   = 1
+    // True if EFFDevice's master output volume control is enabled.
+    kEFFEnabledOutputControlsIndex_Volume = 0,
+    // True if EFFDevice's master output mute control is enabled.
+    kEFFEnabledOutputControlsIndex_Mute   = 1
 };
 
 
-#pragma mark BGMDevice Custom Property Addresses
+#pragma mark EFFDevice Custom Property Addresses
 
 // For convenience.
 
-static const AudioObjectPropertyAddress kBGMMusicPlayerProcessIDAddress = {
+static const AudioObjectPropertyAddress kEFFMusicPlayerProcessIDAddress = {
     kAudioDeviceCustomPropertyMusicPlayerProcessID,
     kAudioObjectPropertyScopeGlobal,
     kAudioObjectPropertyElementMaster
 };
 
-static const AudioObjectPropertyAddress kBGMMusicPlayerBundleIDAddress = {
+static const AudioObjectPropertyAddress kEFFMusicPlayerBundleIDAddress = {
     kAudioDeviceCustomPropertyMusicPlayerBundleID,
     kAudioObjectPropertyScopeGlobal,
     kAudioObjectPropertyElementMaster
 };
 
-static const AudioObjectPropertyAddress kBGMAudibleStateAddress = {
+static const AudioObjectPropertyAddress kEFFAudibleStateAddress = {
     kAudioDeviceCustomPropertyDeviceAudibleState,
     kAudioObjectPropertyScopeGlobal,
     kAudioObjectPropertyElementMaster
 };
 
-static const AudioObjectPropertyAddress kBGMRunningSomewhereOtherThanBGMAppAddress = {
-    kAudioDeviceCustomPropertyDeviceIsRunningSomewhereOtherThanBGMApp,
+static const AudioObjectPropertyAddress kEFFRunningSomewhereOtherThanEFFAppAddress = {
+    kAudioDeviceCustomPropertyDeviceIsRunningSomewhereOtherThanEFFApp,
     kAudioObjectPropertyScopeGlobal,
     kAudioObjectPropertyElementMaster
 };
 
-static const AudioObjectPropertyAddress kBGMAppVolumesAddress = {
+static const AudioObjectPropertyAddress kEFFAppVolumesAddress = {
     kAudioDeviceCustomPropertyAppVolumes,
     kAudioObjectPropertyScopeGlobal,
     kAudioObjectPropertyElementMaster
 };
 
-static const AudioObjectPropertyAddress kBGMEnabledOutputControlsAddress = {
+static const AudioObjectPropertyAddress kEFFEnabledOutputControlsAddress = {
     kAudioDeviceCustomPropertyEnabledOutputControls,
     kAudioObjectPropertyScopeOutput,
     kAudioObjectPropertyElementMaster
