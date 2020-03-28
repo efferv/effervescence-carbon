@@ -42,6 +42,7 @@
 		3FB5C3A5242D406400189EFB /* EFF_VolumeControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C3A4242D406400189EFB /* EFF_VolumeControl.cpp */; };
 		3FB5C3A8242D40DF00189EFB /* EFF_MuteControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C3A7242D40DF00189EFB /* EFF_MuteControl.cpp */; };
 		3FB5C3AB242D46AE00189EFB /* EFF_Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C3AA242D46AE00189EFB /* EFF_Device.cpp */; };
+		3FB5C3AE242FD22A00189EFB /* EFF_PlugIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C3AD242FD22A00189EFB /* EFF_PlugIn.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +122,8 @@
 		3FB5C3A7242D40DF00189EFB /* EFF_MuteControl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_MuteControl.cpp; sourceTree = SOURCE_ROOT; };
 		3FB5C3A9242D415400189EFB /* EFF_Device.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_Device.h; sourceTree = SOURCE_ROOT; };
 		3FB5C3AA242D46AE00189EFB /* EFF_Device.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_Device.cpp; sourceTree = SOURCE_ROOT; };
+		3FB5C3AC242FC4AC00189EFB /* EFF_PlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFF_PlugIn.h; sourceTree = SOURCE_ROOT; };
+		3FB5C3AD242FD22A00189EFB /* EFF_PlugIn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EFF_PlugIn.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +233,8 @@
 			children = (
 				3FB5C34C242A34F300189EFB /* Info.plist */,
 				3FB5C355242A374D00189EFB /* EFF_PlugInInterface.cpp */,
+				3FB5C3AC242FC4AC00189EFB /* EFF_PlugIn.h */,
+				3FB5C3AD242FD22A00189EFB /* EFF_PlugIn.cpp */,
 				3FB5C37F242A5C7B00189EFB /* EFF_Object.cpp */,
 				3FB5C380242A5C7B00189EFB /* EFF_Object.h */,
 				3FB5C382242A64EA00189EFB /* EFF_AbstractDevice.h */,
@@ -410,6 +415,7 @@
 				3FB5C3A0242D07A200189EFB /* EFF_AudibleState.cpp in Sources */,
 				3FB5C396242B5E2700189EFB /* EFF_ClientMap.cpp in Sources */,
 				3FB5C393242B491C00189EFB /* EFF_Client.cpp in Sources */,
+				3FB5C3AE242FD22A00189EFB /* EFF_PlugIn.cpp in Sources */,
 				3FB5C38A242A729C00189EFB /* EFF_Stream.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

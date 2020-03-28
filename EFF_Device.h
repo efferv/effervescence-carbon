@@ -277,7 +277,7 @@ public:
     void                        PerformConfigChange(UInt64 inChangeAction, void* __nullable inChangeInfo);
     /*! Cancel a change requested with EFF_PlugIn::Host_RequestDeviceConfigurationChange. */
     void                        AbortConfigChange(UInt64 inChangeAction, void* __nullable inChangeInfo);
-    
+
 private:
     static pthread_once_t               sStaticInitializer;
     static EFF_Device* __nonnull        sInstance;
