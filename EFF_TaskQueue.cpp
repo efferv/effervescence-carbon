@@ -194,7 +194,8 @@ bool    EFF_TaskQueue::Queue_UpdateClientIOState(bool inSync,
     }
 }
 
-// This function happens synchronously, but it can add tasks to either RT or nonRT queues on respective threads
+// This function happens synchronously (i.e. it returns only after the work is done)
+// but it can add tasks to either RT or nonRT queues on respective threads
 UInt64    EFF_TaskQueue::QueueSync(EFF_TaskID inTaskID,
                                    bool inRunOnRealtimeThread,
                                    UInt64 inTaskArg1,
@@ -225,7 +226,7 @@ UInt64    EFF_TaskQueue::QueueSync(EFF_TaskID inTaskID,
     EFF_Utils::ThrowIfMachError("EFF_TaskQueue::QueueSync",
                                 "semaphore_signal",
                                 theError);
-    
+
     // Wait until the task has been processed.
     //
     // The worker thread signals all threads waiting on this semaphore when it finishes a task.
@@ -443,8 +444,10 @@ bool    EFF_TaskQueue::ProcessRealTimeThreadTask(EFF_Task* inTask)
 bool    EFF_TaskQueue::ProcessNonRealTimeThreadTask(EFF_Task* inTask)
 {
 #if DEBUG  // Always checks the condition, if for some reason the compiler doesn't optimise it away, even in release builds
-    Assert(mNonRealTimeThread.IsCurrentThread(), "ProcessNonRealTimeThreadTask should only be called on the non-realtime worker thread.");
-    Assert(mNonRealTimeThread.IsTimeShareThread(), "mNonRealTimeThread should not be in a time-constraint priority band.");
+    Assert(mNonRealTimeThread.IsCurrentThread(),
+           "ProcessNonRealTimeThreadTask should only be called on the non-realtime worker thread.");
+    Assert(mNonRealTimeThread.IsTimeShareThread(),
+           "mNonRealTimeThread should not be in a time-constraint priority band.");
 #endif
     
     switch(inTask->GetTaskID())

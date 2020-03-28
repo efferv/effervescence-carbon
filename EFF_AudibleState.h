@@ -47,6 +47,8 @@ public:
      Read an audio buffer sent by a single device client (i.e. a process playing audio) and update
      the audible state. The update will only affect the return value of GetState after the next
      call to UpdateWithMixedIO, when all IO for the cycle has been read.
+     
+     Called within 
 
      Real-time safe. Not thread safe.
      */

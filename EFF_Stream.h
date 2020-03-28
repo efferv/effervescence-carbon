@@ -70,6 +70,8 @@ public:
 #pragma mark Implementation
 
 public:
+    // This is only called by EFFDevice and not by this stream itself, because the device will
+    // make the decision to set the sample rates for both streams at once
     void                        SetSampleRate(Float64 inSampleRate);
 
 private:
