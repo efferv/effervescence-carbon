@@ -141,7 +141,7 @@ private:
 
 #pragma mark Members
 
-    EFF_TaskQueue*                                  TaskQueue;
+    EFF_TaskQueue*                                  mTaskQueue;
     
     // Must be held to access mClientMap or mClientMapByPID. Code that runs while holding this mutex needs
     // to be real-time safe. Should probably not be held for most operations on mClientMapByBundleID because,

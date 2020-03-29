@@ -10,23 +10,23 @@
 #define EFF_AbstractDevice_h
 
 // SuperClass Includes
-#include "BGM_Object.h"
+#include "EFF_Object.h"
 
 
 #pragma clang assume_nonnull begin
 
-class BGM_AbstractDevice
+class EFF_AbstractDevice
 :
-    public BGM_Object
+    public EFF_Object
 {
 
 
 #pragma mark Construction/Destruction
 
 protected:
-                                BGM_AbstractDevice(AudioObjectID inObjectID,
+                                EFF_AbstractDevice(AudioObjectID inObjectID,
                                                    AudioObjectID inOwnerObjectID);
-    virtual                     ~BGM_AbstractDevice();
+    virtual                     ~EFF_AbstractDevice();
 
 
 #pragma mark Property Operations

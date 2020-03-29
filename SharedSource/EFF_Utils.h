@@ -27,7 +27,7 @@
 
 // The Assert macro from CADebugMacros with support for format strings and line numbers added.
 #if DEBUG
-    #define BGMAssert(inCondition, inMessage, ...)                                  \
+    #define EFFAssert(inCondition, inMessage, ...)                                  \
         if(!(inCondition))                                                          \
         {                                                                           \
             DebugMsg("%s:%d:%s: " inMessage,                                        \
@@ -38,24 +38,24 @@
             __ASSERT_STOP;                                                          \
         }
 #else
-    #define BGMAssert(inCondition, inMessage, ...)
+    #define EFFAssert(inCondition, inMessage, ...)
 #endif /* DEBUG */
 
-#define BGMAssertNonNull(expression) \
-    BGMAssertNonNull2((expression), #expression)
+#define EFFAssertNonNull(expression) \
+    EFFAssertNonNull2((expression), #expression)
 
-#define BGMAssertNonNull2(expression, expressionStr) \
-    BGMAssert((expression), \
+#define EFFAssertNonNull2(expression, expressionStr) \
+    EFFAssert((expression), \
               "%s:%d:%s: '%s' is null", \
               __FILE__, \
               __LINE__, \
               __FUNCTION__, \
               expressionStr);
 
-// Used to give the first 3 arguments of BGM_Utils::LogAndSwallowExceptions and
-// BGM_Utils::LogUnexpectedExceptions (and probably others in future). Mainly so we can call those
+// Used to give the first 3 arguments of EFF_Utils::LogAndSwallowExceptions and
+// EFF_Utils::LogUnexpectedExceptions (and probably others in future). Mainly so we can call those
 // functions directly instead of using the macro wrappers.
-#define BGMDbgArgs __FILE__, __LINE__, __FUNCTION__
+#define EFFDbgArgs __FILE__, __LINE__, __FUNCTION__
 
 
 #pragma mark Objective-C Macros
@@ -65,28 +65,28 @@
 #if __has_feature(objc_generics)
 
 // This trick is from https://gist.github.com/robb/d55b72d62d32deaee5fa
-@interface BGMNonNullCastHelper<__covariant T>
+@interface EFFNonNullCastHelper<__covariant T>
 
 - (nonnull T) asNonNull;
 
 @end
 
 // Explicitly casts expressions from nullable to non-null. Only works with expressions that
-// evaluate to Objective-C objects. Use BGM_Utils::NN for other types.
+// evaluate to Objective-C objects. Use EFF_Utils::NN for other types.
 //
 // TODO: Replace existing non-null casts with this.
-#define BGMNN(expression) ({ \
+#define EFFNN(expression) ({ \
         __typeof((expression)) value = (expression); \
-        BGMAssertNonNull2(value, #expression); \
-        BGMNonNullCastHelper<__typeof((expression))>* helper; \
+        EFFAssertNonNull2(value, #expression); \
+        EFFNonNullCastHelper<__typeof((expression))>* helper; \
         (__typeof(helper.asNonNull) __nonnull)value; \
     })
 
 #else /* __has_feature(objc_generics) */
 
-#define BGMNN(expression) ({ \
+#define EFFNN(expression) ({ \
         id value = (expression); \
-        BGMAssertNonNull2(value, #expression); \
+        EFFAssertNonNull2(value, #expression); \
         value; \
     })
 
@@ -98,29 +98,29 @@
 #pragma mark C++ Macros
 
 #if defined(__cplusplus)
-#define BGMLogException(exception) \
-    BGM_Utils::LogException(__FILE__, __LINE__, __FUNCTION__, exception)
+#define EFFLogException(exception) \
+    EFF_Utils::LogException(__FILE__, __LINE__, __FUNCTION__, exception)
 
-#define BGMLogExceptionIn(callerName, exception) \
-    BGM_Utils::LogException(__FILE__, __LINE__, callerName, exception)
+#define EFFLogExceptionIn(callerName, exception) \
+    EFF_Utils::LogException(__FILE__, __LINE__, callerName, exception)
 
-#define BGMLogAndSwallowExceptions(callerName, function) \
-    BGM_Utils::LogAndSwallowExceptions(__FILE__, __LINE__, callerName, function)
+#define EFFLogAndSwallowExceptions(callerName, function) \
+    EFF_Utils::LogAndSwallowExceptions(__FILE__, __LINE__, callerName, function)
 
-#define BGMLogAndSwallowExceptionsMsg(callerName, message, function) \
-    BGM_Utils::LogAndSwallowExceptions(__FILE__, __LINE__, callerName, message, function)
+#define EFFLogAndSwallowExceptionsMsg(callerName, message, function) \
+    EFF_Utils::LogAndSwallowExceptions(__FILE__, __LINE__, callerName, message, function)
 
-#define BGMLogUnexpectedException() \
-    BGM_Utils::LogUnexpectedException(__FILE__, __LINE__, __FUNCTION__)
+#define EFFLogUnexpectedException() \
+    EFF_Utils::LogUnexpectedException(__FILE__, __LINE__, __FUNCTION__)
 
-#define BGMLogUnexpectedExceptionIn(callerName) \
-    BGM_Utils::LogUnexpectedException(__FILE__, __LINE__, callerName)
+#define EFFLogUnexpectedExceptionIn(callerName) \
+    EFF_Utils::LogUnexpectedException(__FILE__, __LINE__, callerName)
 
-#define BGMLogUnexpectedExceptions(callerName, function) \
-    BGM_Utils::LogUnexpectedExceptions(__FILE__, __LINE__, callerName, function)
+#define EFFLogUnexpectedExceptions(callerName, function) \
+    EFF_Utils::LogUnexpectedExceptions(__FILE__, __LINE__, callerName, function)
 
-#define BGMLogUnexpectedExceptionsMsg(callerName, message, function) \
-    BGM_Utils::LogUnexpectedExceptions(__FILE__, __LINE__, callerName, message, function)
+#define EFFLogUnexpectedExceptionsMsg(callerName, message, function) \
+    EFF_Utils::LogUnexpectedExceptions(__FILE__, __LINE__, callerName, message, function)
 #endif /* defined(__cplusplus) */
 
 
@@ -128,19 +128,19 @@
 
 #pragma mark C Utility Functions
 
-dispatch_queue_t BGMGetDispatchQueue_PriorityUserInteractive(void);
+dispatch_queue_t EFFGetDispatchQueue_PriorityUserInteractive(void);
 
 
 #if defined(__cplusplus)
 #pragma mark C++ Utility Functions
 
-namespace BGM_Utils
+namespace EFF_Utils
 {
-    // Used to explicitly cast from nullable to non-null. For Objective-C objects, use the BGMNN
+    // Used to explicitly cast from nullable to non-null. For Objective-C objects, use the EFFNN
     // macro (above).
     template <typename T>
     inline T __nonnull NN(T __nullable v) {
-        BGMAssertNonNull(v);
+        EFFAssertNonNull(v);
         return static_cast<T __nonnull>(v);
     }
     

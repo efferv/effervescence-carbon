@@ -157,6 +157,47 @@ const
     return theAnswer;
 }
 
+UInt32    EFF_NullDevice::GetPropertyDataSize(AudioObjectID inObjectID,
+                                            pid_t inClientPID,
+                                            const AudioObjectPropertyAddress& inAddress,
+                                            UInt32 inQualifierDataSize,
+                                            const void* __nullable inQualifierData)
+const
+{
+    // Forward stream properties.
+    if(inObjectID == mStream.GetObjectID())
+    {
+        return mStream.GetPropertyDataSize(inObjectID,
+                                           inClientPID,
+                                           inAddress,
+                                           inQualifierDataSize,
+                                           inQualifierData);
+    }
+
+    UInt32 theAnswer = 0;
+
+    switch(inAddress.mSelector)
+    {
+        case kAudioDevicePropertyStreams:
+            theAnswer = 1 * sizeof(AudioObjectID);
+            break;
+
+        case kAudioDevicePropertyAvailableNominalSampleRates:
+            theAnswer = 1 * sizeof(AudioValueRange);
+            break;
+
+        default:
+            theAnswer = EFF_AbstractDevice::GetPropertyDataSize(inObjectID,
+                                                                inClientPID,
+                                                                inAddress,
+                                                                inQualifierDataSize,
+                                                                inQualifierData);
+            break;
+    };
+
+    return theAnswer;
+}
+
 void    EFF_NullDevice::GetPropertyData(AudioObjectID inObjectID,
                                         pid_t inClientPID,
                                         const AudioObjectPropertyAddress& inAddress,
@@ -339,3 +380,123 @@ void    EFF_NullDevice::SetPropertyData(AudioObjectID inObjectID,
         Throw(CAException(kAudioHardwareBadObjectError));
     }
 }
+
+
+#pragma mark IO Operations
+
+void    EFF_NullDevice::StartIO(UInt32 inClientID)
+{
+    #pragma unused (inClientID)
+
+    CAMutex::Locker theStateLocker(mStateMutex);
+
+    if(mClientsDoingIO == 0)
+    {
+        // Reset the clock.
+        mNumberTimeStamps = 0;
+        mAnchorHostTime = CAHostTimeBase::GetTheCurrentTime();
+
+        // Send notifications.
+        DebugMsg("EFF_NullDevice::StartIO: Sending kAudioDevicePropertyDeviceIsRunning");
+        CADispatchQueue::GetGlobalSerialQueue().Dispatch(false, ^{
+            AudioObjectPropertyAddress theChangedProperty[] = {
+                CAPropertyAddress(kAudioDevicePropertyDeviceIsRunning)
+            };
+            EFF_PlugIn::Host_PropertiesChanged(kObjectID_Device_Null, 1, theChangedProperty);
+        });
+    }
+
+    mClientsDoingIO++;
+}
+
+void    EFF_NullDevice::StopIO(UInt32 inClientID)
+{
+    #pragma unused (inClientID)
+
+    CAMutex::Locker theStateLocker(mStateMutex);
+
+    ThrowIf(mClientsDoingIO == 0,
+            CAException(kAudioHardwareIllegalOperationError),
+            "EFF_NullDevice::StopIO: Underflowed mClientsDoingIO");
+
+    mClientsDoingIO--;
+
+    if(mClientsDoingIO == 0)
+    {
+        // Send notifications.
+        DebugMsg("EFF_NullDevice::StopIO: Sending kAudioDevicePropertyDeviceIsRunning");
+        CADispatchQueue::GetGlobalSerialQueue().Dispatch(false, ^{
+            AudioObjectPropertyAddress theChangedProperty[] = {
+                CAPropertyAddress(kAudioDevicePropertyDeviceIsRunning)
+            };
+            EFF_PlugIn::Host_PropertiesChanged(kObjectID_Device_Null, 1, theChangedProperty);
+        });
+    }
+}
+
+void    EFF_NullDevice::GetZeroTimeStamp(Float64& outSampleTime,
+                                         UInt64& outHostTime,
+                                         UInt64& outSeed)
+{
+    CAMutex::Locker theIOLocker(mIOMutex);
+
+    // Not sure whether there's actually any point to implementing this. The documentation says that
+    // clockless devices don't need to, but if the device doesn't have
+    // kAudioDevicePropertyZeroTimeStampPeriod the HAL seems to reject it. So we give it a simple
+    // clock similar to the loopback clock in EFF_Device.
+    UInt64 theCurrentHostTime = CAHostTimeBase::GetTheCurrentTime();
+
+    // Calculate the next host time.
+    Float64 theHostTicksPerPeriod = mHostTicksPerFrame * static_cast<Float64>(kZeroTimeStampPeriod);
+    Float64 theHostTickOffset = static_cast<Float64>(mNumberTimeStamps + 1) * theHostTicksPerPeriod;
+    UInt64 theNextHostTime = mAnchorHostTime + static_cast<UInt64>(theHostTickOffset);
+
+    // Go to the next period if the next host time is less than the current time.
+    if(theNextHostTime <= theCurrentHostTime)
+    {
+        mNumberTimeStamps++;
+    }
+
+    Float64 theHostTicksSinceAnchor =
+        (static_cast<Float64>(mNumberTimeStamps) * theHostTicksPerPeriod);
+
+    // Set the return values.
+    outSampleTime = mNumberTimeStamps * kZeroTimeStampPeriod;
+    outHostTime = static_cast<UInt64>(mAnchorHostTime + theHostTicksSinceAnchor);
+    outSeed = 1;
+}
+
+void    EFF_NullDevice::WillDoIOOperation(UInt32 inOperationID,
+                                          bool& outWillDo,
+                                          bool& outWillDoInPlace) const
+{
+    switch(inOperationID)
+    {
+        case kAudioServerPlugInIOOperationWriteMix:
+            outWillDo = true;
+            outWillDoInPlace = true;
+            break;
+
+        default:
+            outWillDo = false;
+            outWillDoInPlace = true;
+            break;
+            
+    };
+}
+
+void    EFF_NullDevice::DoIOOperation(AudioObjectID inStreamObjectID,
+                                      UInt32 inClientID,
+                                      UInt32 inOperationID,
+                                      UInt32 inIOBufferFrameSize,
+                                      const AudioServerPlugInIOCycleInfo& inIOCycleInfo,
+                                      void* ioMainBuffer,
+                                      void* __nullable ioSecondaryBuffer)
+{
+    #pragma unused (inStreamObjectID, inClientID, inOperationID, inIOCycleInfo, inIOBufferFrameSize)
+    #pragma unused (ioMainBuffer, ioSecondaryBuffer)
+    // Ignore the audio data.
+}
+
+#pragma clang assume_nonnull end
+

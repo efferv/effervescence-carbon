@@ -21,6 +21,9 @@
 #include "CAPropertyAddress.h"
 #include "CADispatchQueue.h"
 
+#pragma clang assume_nonnull begin
+
+
 EFF_Stream::EFF_Stream(AudioObjectID inObjectID,
                        AudioDeviceID inOwnerDeviceID,
                        bool inIsInput,

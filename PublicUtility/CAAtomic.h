@@ -64,7 +64,11 @@ full barrier.
 #else
 	#include <CoreFoundation/CFBase.h>
 	#include <libkern/OSAtomic.h>
+    #include <atomic>
 #endif
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
 
 inline void CAMemoryBarrier() 
 {
@@ -84,7 +88,7 @@ inline SInt32 CAAtomicAdd32Barrier(SInt32 theAmt, volatile SInt32* theValue)
 	// to keep it sync with OSX.
 	return lRetVal + theAmt;
 #else
-	return OSAtomicAdd32Barrier(theAmt, (volatile int32_t *)theValue);
+    return OSAtomicAdd32Barrier(theAmt, (volatile int32_t *)theValue);
 #endif
 }
 
@@ -301,5 +305,6 @@ inline bool    CASpinLockTry( volatile CASpinLock *__lock )
 #endif
 }
 
+#pragma clang diagnostic pop
 
 #endif // __CAAtomic_h__

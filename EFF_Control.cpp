@@ -16,6 +16,7 @@
 // System Includes
 #include <CoreAudio/AudioHardwareBase.h>
 
+#pragma clang assume_nonnull begin
 
 #pragma mark Construction/Destruction
 

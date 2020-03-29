@@ -6,8 +6,8 @@
 //  Copyright © 2020 nerrons. All rights reserved.
 //
 
-#ifndef EFF_NullDevice_h
-#define EFF_NullDevice_h
+#ifndef __EFF_NullDevice_h
+#define __EFF_NullDevice_h
 
 // SuperClass Includes
 #include "EFF_AbstractDevice.h"
@@ -149,4 +149,4 @@ private:
 
 #pragma clang assume_nonnull end
 
-#endif /* EFF_NullDevice_h */
+#endif /* __EFF_NullDevice_h */

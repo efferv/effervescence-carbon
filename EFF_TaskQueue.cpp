@@ -31,6 +31,9 @@
 #include <mach/task.h>
 
 
+#pragma clang assume_nonnull begin
+
+
 #pragma mark Construction/destruction
 
 EFF_TaskQueue::EFF_TaskQueue()

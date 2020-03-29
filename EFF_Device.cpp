@@ -15,7 +15,7 @@
 
 // Local Includes
 #include "EFF_PlugIn.h"
-#include "EFF_XPCHelper.h"
+// #include "EFF_XPCHelper.h"
 #include "EFF_Utils.h"
 
 // PublicUtility Includes
@@ -1288,7 +1288,7 @@ void    EFF_Device::Device_SetPropertyData(AudioObjectID inObjectID,
     };
 }
 
-/
+
 #pragma mark IO Operations
 
 void    EFF_Device::StartIO(UInt32 inClientID)
@@ -1332,6 +1332,7 @@ void    EFF_Device::StartIO(UInt32 inClientID)
     // We only return from StartIO after EFFApp is ready to pass the audio through to the output device. That way
     // the HAL doesn't start sending us data before EFFApp can play it, which would mean we'd have to either drop
     // frames or increase latency.
+    /*
     if(!clientIsEFFApp && EFFAppHasClientRegistered)
     {
         UInt64 theXPCError = StartEFFAppPlayThroughSync(GetObjectID() == kObjectID_Device_UI_Sounds);
@@ -1359,6 +1360,7 @@ void    EFF_Device::StartIO(UInt32 inClientID)
                 Throw(CAException(kAudioHardwareNotRunningError));
         }
     }
+    */
 }
 
 void    EFF_Device::StopIO(UInt32 inClientID)
