@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3FB5C349242A34F300189EFB"
-               BuildableName = "effervescence-core.driver"
-               BlueprintName = "effervescence-core"
-               ReferencedContainer = "container:effervescence-core.xcodeproj">
+               BuildableName = "effervescence-carbon.driver"
+               BlueprintName = "effervescence-carbon"
+               ReferencedContainer = "container:effervescence-carbon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -51,9 +51,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3FB5C349242A34F300189EFB"
-            BuildableName = "effervescence-core.driver"
-            BlueprintName = "effervescence-core"
-            ReferencedContainer = "container:effervescence-core.xcodeproj">
+            BuildableName = "effervescence-carbon.driver"
+            BlueprintName = "effervescence-carbon"
+            ReferencedContainer = "container:effervescence-carbon.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

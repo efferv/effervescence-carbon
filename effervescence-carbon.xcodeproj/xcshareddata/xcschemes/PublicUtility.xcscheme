@@ -17,7 +17,7 @@
                BlueprintIdentifier = "3FB5C2E6242A2C4F00189EFB"
                BuildableName = "libPublicUtility.a"
                BlueprintName = "PublicUtility"
-               ReferencedContainer = "container:effervescence-core.xcodeproj">
+               ReferencedContainer = "container:effervescence-carbon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,15 +47,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3FB5C2E6242A2C4F00189EFB"
-            BuildableName = "libPublicUtility.a"
-            BlueprintName = "PublicUtility"
-            ReferencedContainer = "container:effervescence-core.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -66,7 +66,6 @@
 		3FB5C57324313FDB00189EFB /* EFF_PlugInInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C56324313FDB00189EFB /* EFF_PlugInInterface.cpp */; };
 		3FB5C57824313FE400189EFB /* quick_install.conf in Resources */ = {isa = PBXBuildFile; fileRef = 3FB5C57524313FE400189EFB /* quick_install.conf */; };
 		3FB5C57A24313FE400189EFB /* quick_install.sh in Resources */ = {isa = PBXBuildFile; fileRef = 3FB5C57724313FE400189EFB /* quick_install.sh */; };
-<<<<<<< HEAD
 		3FB5C58C2431CF3300189EFB /* CAHALAudioObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C5842431CF3300189EFB /* CAHALAudioObject.cpp */; };
 		3FB5C58D2431CF3300189EFB /* CAHALAudioDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB5C5852431CF3300189EFB /* CAHALAudioDevice.h */; };
 		3FB5C58E2431CF3300189EFB /* CAHALAudioStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB5C5862431CF3300189EFB /* CAHALAudioStream.h */; };
@@ -75,8 +74,6 @@
 		3FB5C5912431CF3300189EFB /* CAHALAudioStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C5892431CF3300189EFB /* CAHALAudioStream.cpp */; };
 		3FB5C5922431CF3300189EFB /* CAHALAudioObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB5C58A2431CF3300189EFB /* CAHALAudioObject.h */; };
 		3FB5C5932431CF3300189EFB /* CAHALAudioDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C58B2431CF3300189EFB /* CAHALAudioDevice.cpp */; };
-=======
->>>>>>> 92292490a67acf72182de60bbea56fa708b2d4db
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,7 +82,7 @@
 		3FB5C2BE242A1DFA00189EFB /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		3FB5C2C0242A1E0500189EFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3FB5C2E7242A2C4F00189EFB /* libPublicUtility.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPublicUtility.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FB5C34A242A34F300189EFB /* effervescence-core.driver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "effervescence-core.driver"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FB5C34A242A34F300189EFB /* effervescence-carbon.driver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "effervescence-carbon.driver"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB5C4BC24313DFD00189EFB /* CADebugger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CADebugger.cpp; path = ../PublicUtility/CADebugger.cpp; sourceTree = "<group>"; };
 		3FB5C4BD24313DFD00189EFB /* CADispatchQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CADispatchQueue.cpp; path = ../PublicUtility/CADispatchQueue.cpp; sourceTree = "<group>"; };
 		3FB5C4BE24313DFD00189EFB /* CADispatchQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CADispatchQueue.h; path = ../PublicUtility/CADispatchQueue.h; sourceTree = "<group>"; };
@@ -158,7 +155,6 @@
 		3FB5C57524313FE400189EFB /* quick_install.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = quick_install.conf; sourceTree = "<group>"; };
 		3FB5C57624313FE400189EFB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FB5C57724313FE400189EFB /* quick_install.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = quick_install.sh; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		3FB5C5842431CF3300189EFB /* CAHALAudioObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CAHALAudioObject.cpp; path = ../PublicUtility/CAHALAudioObject.cpp; sourceTree = "<group>"; };
 		3FB5C5852431CF3300189EFB /* CAHALAudioDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAHALAudioDevice.h; path = ../PublicUtility/CAHALAudioDevice.h; sourceTree = "<group>"; };
 		3FB5C5862431CF3300189EFB /* CAHALAudioStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAHALAudioStream.h; path = ../PublicUtility/CAHALAudioStream.h; sourceTree = "<group>"; };
@@ -167,8 +163,6 @@
 		3FB5C5892431CF3300189EFB /* CAHALAudioStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CAHALAudioStream.cpp; path = ../PublicUtility/CAHALAudioStream.cpp; sourceTree = "<group>"; };
 		3FB5C58A2431CF3300189EFB /* CAHALAudioObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAHALAudioObject.h; path = ../PublicUtility/CAHALAudioObject.h; sourceTree = "<group>"; };
 		3FB5C58B2431CF3300189EFB /* CAHALAudioDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CAHALAudioDevice.cpp; path = ../PublicUtility/CAHALAudioDevice.cpp; sourceTree = "<group>"; };
-=======
->>>>>>> 92292490a67acf72182de60bbea56fa708b2d4db
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,8 +191,8 @@
 		3FB5C2A6242A1DB500189EFB = {
 			isa = PBXGroup;
 			children = (
-				3FB5C54324313FDB00189EFB /* CoreSource */,
-				3FB5C57424313FE400189EFB /* CoreSupport */,
+				3FB5C54324313FDB00189EFB /* CarbonSource */,
+				3FB5C57424313FE400189EFB /* CarbonSupport */,
 				3FB5C2B9242A1DD700189EFB /* Frameworks */,
 				3FB5C2B0242A1DB500189EFB /* Products */,
 				3FB5C4BB24313DEE00189EFB /* PublicUtility */,
@@ -210,7 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				3FB5C2E7242A2C4F00189EFB /* libPublicUtility.a */,
-				3FB5C34A242A34F300189EFB /* effervescence-core.driver */,
+				3FB5C34A242A34F300189EFB /* effervescence-carbon.driver */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,7 +223,6 @@
 		3FB5C4BB24313DEE00189EFB /* PublicUtility */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				3FB5C58B2431CF3300189EFB /* CAHALAudioDevice.cpp */,
 				3FB5C5852431CF3300189EFB /* CAHALAudioDevice.h */,
 				3FB5C5842431CF3300189EFB /* CAHALAudioObject.cpp */,
@@ -238,8 +231,6 @@
 				3FB5C5862431CF3300189EFB /* CAHALAudioStream.h */,
 				3FB5C5872431CF3300189EFB /* CAHALAudioSystemObject.cpp */,
 				3FB5C5882431CF3300189EFB /* CAHALAudioSystemObject.h */,
-=======
->>>>>>> 92292490a67acf72182de60bbea56fa708b2d4db
 				3FB5C4CE24313DFE00189EFB /* CADebugger.h */,
 				3FB5C4DA24313DFE00189EFB /* CACFNumber.cpp */,
 				3FB5C4D524313DFE00189EFB /* CAAtomic.h */,
@@ -288,7 +279,7 @@
 			name = SharedSource;
 			sourceTree = "<group>";
 		};
-		3FB5C54324313FDB00189EFB /* CoreSource */ = {
+		3FB5C54324313FDB00189EFB /* CarbonSource */ = {
 			isa = PBXGroup;
 			children = (
 				3FB5C55F24313FDB00189EFB /* EFF_AbstractDevice.cpp */,
@@ -324,17 +315,17 @@
 				3FB5C54E24313FDB00189EFB /* EFF_WrappedAudioEngine.cpp */,
 				3FB5C54D24313FDB00189EFB /* EFF_WrappedAudioEngine.h */,
 			);
-			path = CoreSource;
+			path = CarbonSource;
 			sourceTree = "<group>";
 		};
-		3FB5C57424313FE400189EFB /* CoreSupport */ = {
+		3FB5C57424313FE400189EFB /* CarbonSupport */ = {
 			isa = PBXGroup;
 			children = (
 				3FB5C57624313FE400189EFB /* Info.plist */,
 				3FB5C57524313FE400189EFB /* quick_install.conf */,
 				3FB5C57724313FE400189EFB /* quick_install.sh */,
 			);
-			path = CoreSupport;
+			path = CarbonSupport;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,15 +337,10 @@
 			files = (
 				3FB5C50524313E2E00189EFB /* EFF_Types.h in Headers */,
 				3FB5C4E324313DFE00189EFB /* CACFNumber.h in Headers */,
-<<<<<<< HEAD
 				3FB5C5922431CF3300189EFB /* CAHALAudioObject.h in Headers */,
 				3FB5C4EE24313DFE00189EFB /* CADebugger.h in Headers */,
 				3FB5C4E024313DFE00189EFB /* CARingBuffer.h in Headers */,
 				3FB5C58D2431CF3300189EFB /* CAHALAudioDevice.h in Headers */,
-=======
-				3FB5C4EE24313DFE00189EFB /* CADebugger.h in Headers */,
-				3FB5C4E024313DFE00189EFB /* CARingBuffer.h in Headers */,
->>>>>>> 92292490a67acf72182de60bbea56fa708b2d4db
 				3FB5C4F524313DFE00189EFB /* CAAtomic.h in Headers */,
 				3FB5C4E424313DFE00189EFB /* CACFString.h in Headers */,
 				3FB5C4F624313DFE00189EFB /* CADebugMacros.h in Headers */,
@@ -362,10 +348,7 @@
 				3FB5C4EB24313DFE00189EFB /* CAPThread.h in Headers */,
 				3FB5C4E124313DFE00189EFB /* CACFDictionary.h in Headers */,
 				3FB5C4F424313DFE00189EFB /* CAPropertyAddress.h in Headers */,
-<<<<<<< HEAD
 				3FB5C5902431CF3300189EFB /* CAHALAudioSystemObject.h in Headers */,
-=======
->>>>>>> 92292490a67acf72182de60bbea56fa708b2d4db
 				3FB5C4F724313DFE00189EFB /* CABitOperations.h in Headers */,
 				3FB5C4F324313DFE00189EFB /* CAVolumeCurve.h in Headers */,
 				3FB5C4F124313DFE00189EFB /* CAHostTimeBase.h in Headers */,
@@ -377,10 +360,7 @@
 				3FB5C4F824313DFE00189EFB /* CAAtomicStack.h in Headers */,
 				3FB5C4EC24313DFE00189EFB /* CACFArray.h in Headers */,
 				3FB5C50424313E2E00189EFB /* EFF_TestUtils.h in Headers */,
-<<<<<<< HEAD
 				3FB5C58E2431CF3300189EFB /* CAHALAudioStream.h in Headers */,
-=======
->>>>>>> 92292490a67acf72182de60bbea56fa708b2d4db
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,9 +384,9 @@
 			productReference = 3FB5C2E7242A2C4F00189EFB /* libPublicUtility.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		3FB5C349242A34F300189EFB /* effervescence-core */ = {
+		3FB5C349242A34F300189EFB /* effervescence-carbon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FB5C34D242A34F300189EFB /* Build configuration list for PBXNativeTarget "effervescence-core" */;
+			buildConfigurationList = 3FB5C34D242A34F300189EFB /* Build configuration list for PBXNativeTarget "effervescence-carbon" */;
 			buildPhases = (
 				3FB5C346242A34F300189EFB /* Sources */,
 				3FB5C347242A34F300189EFB /* Frameworks */,
@@ -416,9 +396,9 @@
 			);
 			dependencies = (
 			);
-			name = "effervescence-core";
+			name = "effervescence-carbon";
 			productName = "effervescence-driver";
-			productReference = 3FB5C34A242A34F300189EFB /* effervescence-core.driver */;
+			productReference = 3FB5C34A242A34F300189EFB /* effervescence-carbon.driver */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -439,7 +419,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3FB5C2AA242A1DB500189EFB /* Build configuration list for PBXProject "effervescence-core" */;
+			buildConfigurationList = 3FB5C2AA242A1DB500189EFB /* Build configuration list for PBXProject "effervescence-carbon" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -452,7 +432,7 @@
 			projectRoot = "";
 			targets = (
 				3FB5C2E6242A2C4F00189EFB /* PublicUtility */,
-				3FB5C349242A34F300189EFB /* effervescence-core */,
+				3FB5C349242A34F300189EFB /* effervescence-carbon */,
 			);
 		};
 /* End PBXProject section */
@@ -476,10 +456,7 @@
 			files = (
 				3FB5C4ED24313DFE00189EFB /* CADebugPrintf.cpp in Sources */,
 				3FB5C50224313E2E00189EFB /* EFF_Utils.cpp in Sources */,
-<<<<<<< HEAD
 				3FB5C58F2431CF3300189EFB /* CAHALAudioSystemObject.cpp in Sources */,
-=======
->>>>>>> 92292490a67acf72182de60bbea56fa708b2d4db
 				3FB5C4DF24313DFE00189EFB /* CACFArray.cpp in Sources */,
 				3FB5C4E824313DFE00189EFB /* CAMutex.cpp in Sources */,
 				3FB5C4EA24313DFE00189EFB /* CAPThread.cpp in Sources */,
@@ -491,12 +468,9 @@
 				3FB5C4F024313DFE00189EFB /* CARingBuffer.cpp in Sources */,
 				3FB5C4E224313DFE00189EFB /* CADebugMacros.cpp in Sources */,
 				3FB5C4F224313DFE00189EFB /* CAHostTimeBase.cpp in Sources */,
-<<<<<<< HEAD
 				3FB5C5932431CF3300189EFB /* CAHALAudioDevice.cpp in Sources */,
 				3FB5C58C2431CF3300189EFB /* CAHALAudioObject.cpp in Sources */,
 				3FB5C5912431CF3300189EFB /* CAHALAudioStream.cpp in Sources */,
-=======
->>>>>>> 92292490a67acf72182de60bbea56fa708b2d4db
 				3FB5C4DD24313DFE00189EFB /* CADispatchQueue.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -679,7 +653,7 @@
 				DEVELOPMENT_TEAM = 7RC9R8AS63;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
-				INFOPLIST_FILE = CoreSupport/Info.plist;
+				INFOPLIST_FILE = CarbonSupport/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/HAL";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerrons.effervescence.driver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -697,7 +671,7 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7RC9R8AS63;
 				GCC_C_LANGUAGE_STANDARD = c11;
-				INFOPLIST_FILE = CoreSupport/Info.plist;
+				INFOPLIST_FILE = CarbonSupport/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Audio/Plug-Ins/HAL";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerrons.effervescence.driver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -709,7 +683,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3FB5C2AA242A1DB500189EFB /* Build configuration list for PBXProject "effervescence-core" */ = {
+		3FB5C2AA242A1DB500189EFB /* Build configuration list for PBXProject "effervescence-carbon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FB5C2B4242A1DB500189EFB /* Debug */,
@@ -727,7 +701,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3FB5C34D242A34F300189EFB /* Build configuration list for PBXNativeTarget "effervescence-core" */ = {
+		3FB5C34D242A34F300189EFB /* Build configuration list for PBXNativeTarget "effervescence-carbon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FB5C34E242A34F300189EFB /* Debug */,
